@@ -90,7 +90,7 @@ const baseUrl = "http://localhost:5000";
 
 ```
 
-2. Update user Profile:
+3. Delete users:
 
 ```
   axios.delete(`${baseUrl}/users/${userId}`)
