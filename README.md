@@ -64,7 +64,7 @@ const baseUrl = "http://localhost:5000";
   "name": "User Name",
   "email": "user email",
 }
-  axios.post(`${baseUrl}/createAccount`, userAccount)
+  axios.post(`${baseUrl}/users`, userAccount)
     .then(function (response) {
       console.lot(response)
       })
@@ -94,6 +94,25 @@ const baseUrl = "http://localhost:5000";
 
 ```
   axios.delete(`${baseUrl}/users/${userId}`)
+    .then(function (response) {
+      console.lot(response)
+      })
+    .catch(function (error) {
+      console.log(error)
+      });
+
+```
+4. Add books users:
+
+```
+  const books = {
+  "name":"book name"
+  "description":"Description book",
+  }
+
+  axios.post(`${baseUrl}/users`, books,headers: {
+        'userid': `${userId}`
+      })
     .then(function (response) {
       console.lot(response)
       })
